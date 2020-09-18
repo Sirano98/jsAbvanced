@@ -15,7 +15,7 @@ function getNext() {
     var element = list.children;
     if (flag += 1 < element.length) {
         var next = element[flag];
-        next.classList.toggle("active");
+        next.classList.add("selected");
         flag++;
     }
 };

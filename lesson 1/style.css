@@ -12,3 +12,7 @@ input {
 .active {
     color: red;
 }
+
+.selected {
+    color: green;
+}
