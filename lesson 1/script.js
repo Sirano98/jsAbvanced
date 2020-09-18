@@ -11,9 +11,11 @@ function getLast() {
 };
 
 function getNext() {
+    // если ни один елемент не имеет класа присваиваем первому иначе следующему
     var flag = -1;
     var element = list.children;
-    if (flag += 1 < element.length) {
+    element.classList.remove("active");
+    if (flag++ < element.length) {
         var next = element[flag];
         next.classList.add("selected");
         flag++;
