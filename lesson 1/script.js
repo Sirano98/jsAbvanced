@@ -1,6 +1,4 @@
 var list = document.getElementById("list");
-var newItem = document.createElement("li");
-newItem.innerHTML = "New item";
 
 function getFirst() {
     var first = document.getElementById("list").firstElementChild;
@@ -23,6 +21,8 @@ function getNext() {
 };
 
 function addElement() {
+    var newItem = document.createElement("li");
+    newItem.innerHTML = "New item";
     list.appendChild(newItem);
 };
 
@@ -32,6 +32,8 @@ function removeElement() {
 };
 
 function addTopElement() {
+    var newItem = document.createElement("li");
+    newItem.innerHTML = "New item";
     var topItem = list.firstElementChild;
-    document.body.insertBefore(newItem, list);
+    list.insertBefore(newItem, topItem);
 };
