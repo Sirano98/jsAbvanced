@@ -37,6 +37,26 @@ function getNext() {
     };
 };
 
+function getPrevious() {
+    for (var i = 0; i < elements.length; i++) {
+        if (elements[i].className === "selected") {
+            counter = i;
+        };
+    };
+
+    if (counter >= 0) {
+        elements[counter].classList.remove("selected");
+        if (counter === 0) {
+            counter = -1;
+            list.lastElementChild.classList.add("selected");
+        } else {
+            elements[counter].previousElementSibling.classList.add("selected");
+        };
+    } else {
+        list.lastElementChild.classList.add("selected");
+    };
+};
+
 function addElement() {
     var newItem = document.createElement("li");
     newItem.innerHTML = "New item";
