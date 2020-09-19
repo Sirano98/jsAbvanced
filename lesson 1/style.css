@@ -1,5 +1,6 @@
 li {
     font-size: 20px;
+    width: 75px;
 }
 
 input {
@@ -9,10 +10,7 @@ input {
     text-align: center;
 }
 
-.active {
-    color: red;
-}
-
 .selected {
-    color: green;
+    color: white;
+    background-color: blue;
 }
