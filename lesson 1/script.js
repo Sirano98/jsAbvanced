@@ -1,25 +1,40 @@
 var list = document.getElementById("list");
+var elements = list.children;
+var counter = -1;
 
 function getFirst() {
-    var first = document.getElementById("list").firstElementChild;
-    first.classList.toggle("active");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.remove("selected");
+    };
+    list.firstElementChild.classList.add("selected");
+
 };
 
 function getLast() {
-    var last = document.getElementById("list").lastElementChild;
-    last.classList.toggle("active");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.remove("selected");
+    };
+    list.lastElementChild.classList.add("selected");
 };
 
 function getNext() {
-    // если ни один елемент не имеет класа присваиваем первому иначе следующему
-    var flag = -1;
-    var element = list.children;
-    element.classList.remove("active");
-    if (flag++ < element.length) {
-        var next = element[flag];
-        next.classList.add("selected");
-        flag++;
-    }
+    for (var i = 0; i < elements.length; i++) {
+        if (elements[i].className === "selected") {
+            counter = i;
+        };
+    };
+
+    if (counter >= 0) {
+        elements[counter].classList.remove("selected");
+        if (counter >= elements.length - 1) {
+            counter = -1;
+            list.firstElementChild.classList.add("selected")
+        } else {
+            elements[counter].nextElementSibling.classList.add("selected");
+        };
+    } else {
+        list.firstElementChild.classList.add("selected");
+    };
 };
 
 function addElement() {
