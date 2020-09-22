@@ -15,13 +15,14 @@
 
     <script>
         var firstDiv = document.querySelector("#one");
-        firstDiv.insertAdjacentHTML("afterend", "<div id='two' onclick='createNewDiv()'>two</div>");
+        firstDiv.insertAdjacentHTML("afterend", "<div id='two'>two</div>");
+        var secondDiv = document.querySelector("#two");
 
         function createNewDiv() {
-            var secondDiv = document.querySelector("#two");
             secondDiv.insertAdjacentHTML("beforebegin", "<div id='two_first'>two</div>");
             secondDiv.id = "two_second";
         }
+        secondDiv.onclick = createNewDiv;
     </script>
 </body>
 
