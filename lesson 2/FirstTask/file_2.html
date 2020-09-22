@@ -36,22 +36,28 @@
     <a href="#">Link</a>
 
     <script>
-        var all = document.querySelectorAll("*");
+        var all = document.getElementsByTagName("*");
         for (var i = 0; i < all.length; i++) {
-            all[i].style.cssText = "color: red; text-decoration: none;"
+            all[i].style.color = "red";
+            all[i].style.textDecoration = "none";
         };
 
-        document.querySelector("p").style.cssText = "color: brown;"
+        document.querySelector("p").style.color = "brown";
 
         var text = document.querySelector(".class");
         text.classList.add("newclass");
-        text.style.cssText = "color: green";
+        text.style.color = "green";
         console.log(text.style.cssText);
 
         var elem = document.querySelectorAll("p, a");
         for (var i = 0; i < elem.length; i++) {
-            elem[i].style.cssText = "text-transform: uppercase;";
+            elem[i].style.textTransform = "uppercase";
         };
+
+        var link = document.querySelector("a");
+        link.style.fontWeight = "bold";
+        link.style.fontStyle = "italic";
+        link.style.textDecoration = "underline";
     </script>
 </body>
 
