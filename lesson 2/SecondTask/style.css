@@ -1,0 +1,15 @@
+div {
+    width: 100px;
+    padding: 50px 0px;
+    background-color: blanchedalmond;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#two_first {
+    width: 100px;
+    padding: 50px 0px;
+    background-color: chartreuse;
+    margin-bottom: 5px;
+    text-align: center;
+}
