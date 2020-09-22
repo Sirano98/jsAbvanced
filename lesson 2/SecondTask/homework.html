@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Добавьте после дива с id=one еще один див с текстом two и id=two
+    На клик по id=two добавьте перед ним див с id - two_first, а див с id=two измените на two_second -->
+</head>
+
+<body>
+    <div id="one">one</div>
+
+    <script>
+        var firstDiv = document.querySelector("#one");
+        firstDiv.insertAdjacentHTML("afterend", "<div id='two' onclick='createNewDiv()'>two</div>");
+
+        function createNewDiv() {
+            var secondDiv = document.querySelector("#two");
+            secondDiv.insertAdjacentHTML("beforebegin", "<div id='two_first'>two</div>");
+            secondDiv.id = "two_second";
+        }
+    </script>
+</body>
+
+</html>
