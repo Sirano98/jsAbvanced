@@ -1,14 +1,13 @@
 var userText = prompt("Введите текст");
-var substrs = userText.split(" ");
+var regexp = /\s+/;
+var substrs = userText.split(regexp);
 var ul = document.querySelector("ul");
 
 
 for (var i = 0; i < substrs.length; i++) {
-    if (substrs[i]) {
-        var newItem = document.createElement("li");
-        newItem.innerHTML = substrs[i];
-        ul.appendChild(newItem);
-    };
+    var newItem = document.createElement("li");
+    newItem.innerHTML = substrs[i];
+    ul.appendChild(newItem);
 };
 
 var firstItem = ul.firstElementChild;
