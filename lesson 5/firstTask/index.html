@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Создайте ссылку и див с текстом внутри, который изначально при загрузке страницы будет скрыт.
+При клике на ссылку див появляется, если повторно нажать ссылку див и текст должны пропасть.
+Также создайте кнопку, которая будет отменять выполнение обработчика клика по ссылке.
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: none;
+            padding: 10px;
+            border: 2px solid red;
+            margin-top: 10px;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Действия с элементом</a>
+    <input type="button" value="Снять обработчик">
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex distinctio sint aliquam aperiam dicta
+        libero animi quo officia excepturi mollitia culpa voluptates ipsa alias magnam expedita quas, impedit rem.
+        Expedita?
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
