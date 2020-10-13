@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Man {
+            walk() {
+                console.log("walk")
+            }
+            eat() {
+                console.log("eat")
+            }
+            drink() {
+                console.log("drink")
+            }
+        }
+
+        class Solder extends Man {
+            shoot() {
+                console.log("shoot")
+            }
+        }
+
+        class Doctor extends Man {
+            cure() {
+                console.log("Cure")
+            }
+        }
+
+        class Dentist extends Doctor {
+            cure() {
+                console.log("Treat teeth")
+            }
+        }
+
+        class Surgeon extends Doctor {
+            cure() {
+                console.log("Perform operations")
+            }
+        }
+    </script>
+</body>
+
+</html>
